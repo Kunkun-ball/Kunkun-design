@@ -1,0 +1,14 @@
+package com.hukun.graduation.component;
+
+import com.hukun.graduation.model.StudentInfoModel;
+import com.hukun.graduation.service.StudentInfoService;
+
+public class StudentInfoServiceImpl implements StudentInfoService {
+
+	@Override
+	public StudentInfoModel get(String params) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

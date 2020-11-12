@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.hukun.graduation.mapper.StudentInfoMapper">
+
+	<select id="getStudentInfo" parameterType="Long" resultType="com.hukun.graduation.model.StudentInfoModel">
+		select
+			siid,
+			snumber,
+			sname,
+			college,
+			profession,
+			grade
+		from
+			studentInfo
+		where
+			siid=#{siid}	
+	</select>
+	
+	<insert id="insertStudentInfo" parameterType="map">
+		insert
+			studentInfo(
+				siid,
+				snumber,
+				sname,
+				college,
+				profession,
+				grade
+			)
+			values(
+				#{siid},
+				#{snumber},
+				#{sname},
+				#{college},
+				#{profession},
+				#{grade}
+			)
+	</insert>
+
+</mapper>

@@ -1,0 +1,18 @@
+package com.hukun.graduation.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+import com.alibaba.fastjson.JSONObject;
+import com.hukun.graduation.model.StudentInfoModel;
+
+@Mapper
+public interface StudentInfoMapper {
+	
+	// 查询单条记录
+	StudentInfoModel getStudentInfo(JSONObject paramsObject);
+	
+	// 新增
+	Long insertStudentInfo(JSONObject paramsObject);
+	
+	// 删除
+	Long deleteStudentInfo(JSONObject paramsObject);
+}

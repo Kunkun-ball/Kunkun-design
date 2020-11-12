@@ -1,0 +1,10 @@
+package com.hukun.graduation.mapper;
+
+import java.util.HashMap;
+
+import com.hukun.graduation.model.StudentInfoModel;
+
+public interface StudentInfoMapper {
+	
+	StudentInfoModel getStudentInfo(Long params);
+}

@@ -1,0 +1,25 @@
+package com.hukun.graduation.service;
+
+import java.util.HashMap;
+
+import com.alibaba.fastjson.JSONObject;
+import com.hukun.graduation.model.StudentInfoModel;
+
+public interface StudentInfoService {
+	
+	/**
+	  * 查询
+	 */
+	JSONObject getList(JSONObject paramsObject);
+	
+	/**
+	 * 新增
+	 */
+	
+	JSONObject insert(JSONObject paramsObject);
+	
+	/*
+	 * 删除
+	 */
+	JSONObject delete(JSONObject paramsObject);
+}

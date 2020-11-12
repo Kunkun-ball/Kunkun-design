@@ -1,0 +1,13 @@
+package com.hukun.graduation.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+
+import com.hukun.graduation.model.StudentInfoModel;
+
+@Mapper
+public interface StudentInfoMapper {
+	
+	@Select("select * from studentInfo where siid=#{siid}")
+	StudentInfoModel getStudentInfo(Long params);
+}

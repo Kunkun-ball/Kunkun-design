@@ -1,0 +1,24 @@
+package com.hukun.graduation.component;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.alibaba.fastjson.JSONObject;
+import com.hukun.graduation.mapper.AdminLoginMapper;
+import com.hukun.graduation.model.AdminLoginModel;
+import com.hukun.graduation.service.AdminLoginService;
+
+public class AdminLoginServiceImpl implements AdminLoginService{
+
+	@Autowired
+	private AdminLoginMapper adminLoginMapper;
+	
+	@Override
+	public Long get(JSONObject paramsObject) {
+		
+		paramsObject.getLong("slid");
+		paramsObject.getString("password");
+		AdminLoginModel adminInfo = adminLoginMapper.getAdminInfo(paramsObject);
+	}
+	
+	
+}

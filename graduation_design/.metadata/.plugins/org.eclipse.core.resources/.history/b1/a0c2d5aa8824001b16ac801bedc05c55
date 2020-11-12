@@ -1,0 +1,5 @@
+package com.hukun.graduation.model;
+
+public class StudentHealthInfoModel {
+
+}

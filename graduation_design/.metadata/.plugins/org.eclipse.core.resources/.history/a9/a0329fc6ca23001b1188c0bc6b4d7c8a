@@ -1,0 +1,31 @@
+package com.hukun.graduation.component;
+
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.alibaba.fastjson.JSONObject;
+import com.hukun.graduation.mapper.StudentInfoMapper;
+import com.hukun.graduation.model.StudentInfoModel;
+import com.hukun.graduation.service.StudentInfoService;
+
+@Service
+public class StudentInfoServiceImpl implements StudentInfoService {
+
+	@Autowired
+	private StudentInfoMapper studentInfoMapper;
+	
+	@Override
+	public StudentInfoModel getList(Long siid) {
+		return studentInfoMapper.getStudentInfo(siid);
+	}
+
+	@Override
+	public JSONObejct insert(JSONObject paramsObject) {
+		studentInfoMapper.insertStudentInfo(paramsObject);
+		return paramsObject;
+	}
+
+	
+}

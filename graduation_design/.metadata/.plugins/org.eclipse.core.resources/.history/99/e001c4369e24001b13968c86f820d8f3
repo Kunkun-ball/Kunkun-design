@@ -1,0 +1,9 @@
+package com.hukun.graduation.mapper;
+
+import com.alibaba.fastjson.JSONObject;
+import com.hukun.graduation.model.AdminLoginModel;
+
+public interface AdminLoginMapper {
+	
+	AdminLoginModel getAdminInfo(JSONObject paramsObject);
+}

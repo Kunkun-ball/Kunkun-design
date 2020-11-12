@@ -1,0 +1,11 @@
+package com.hukun.graduation.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.alibaba.fastjson.JSONObject;
+
+@Mapper
+public interface StudentHealthInfoMapper {
+	
+	Long updateStudentHealthInfo(JSONObject paramsObject);
+}

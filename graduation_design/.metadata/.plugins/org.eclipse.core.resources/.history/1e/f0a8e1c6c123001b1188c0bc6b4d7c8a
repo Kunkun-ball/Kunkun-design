@@ -1,0 +1,50 @@
+package com.hukun.graduation.model;
+
+public class StudentInfoModel {
+	
+	private Long siid;
+	private Long snumber;
+	private String sname;
+	private String college;
+	private String profession;
+	private String grade;
+	
+	public Long getSiid() {
+		return siid;
+	}
+	public void setSiid(Long siid) {
+		this.siid = siid;
+	}
+	public Long getSnumber() {
+		return snumber;
+	}
+	public void setSnumber(Long snumber) {
+		this.snumber = snumber;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	public String getCollege() {
+		return college;
+	}
+	public void setCollege(String college) {
+		this.college = college;
+	}
+	public String getProfession() {
+		return profession;
+	}
+	public void setProfession(String profession) {
+		this.profession = profession;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	
+
+}

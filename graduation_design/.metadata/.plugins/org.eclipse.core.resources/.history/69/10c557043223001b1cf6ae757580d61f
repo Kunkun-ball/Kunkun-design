@@ -1,0 +1,16 @@
+package com.hukun.graduation.mapper;
+
+import java.util.HashMap;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+
+import com.hukun.graduation.model.StudentInfoModel;
+
+@Mapper
+public interface StudentInfoMapper {
+	
+	StudentInfoModel getStudentInfo(Long siid);
+	
+	String insertStudentInfo(HashMap<Object, Object> hashMap);
+}

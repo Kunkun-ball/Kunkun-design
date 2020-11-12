@@ -1,0 +1,30 @@
+package com.hukun.graduation.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.alibaba.fastjson.JSONObject;
+import com.hukun.graduation.component.StudentInfoServiceImpl;
+import com.hukun.graduation.mapper.StudentInfoMapper;
+import com.hukun.graduation.model.StudentInfoModel;
+
+@RestController
+public class DataController {
+	
+	@Autowired
+	private StudentInfoServiceImpl studentInfoServiceImpl;
+	
+	@RequestMapping("/get")
+	public Object getList(Long siid) {
+		StudentInfoModel studentInfo = studentInfoServiceImpl.getList(siid);
+		return studentInfo;
+	}
+	
+	@RequestMapping("/insert")
+	public JSONObject insert(@RequestBody JSONObject paramsObject) {
+		return studentInfoServiceImpl.insert(paramsObject);
+	}
+}

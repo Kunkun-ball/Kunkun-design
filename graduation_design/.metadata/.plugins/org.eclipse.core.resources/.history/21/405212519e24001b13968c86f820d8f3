@@ -1,0 +1,6 @@
+package com.hukun.graduation.service;
+
+public interface StudentHealthInfoService {
+	
+	
+}

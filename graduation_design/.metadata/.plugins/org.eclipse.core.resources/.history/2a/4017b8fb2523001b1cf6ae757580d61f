@@ -1,0 +1,13 @@
+package com.hukun.graduation.mapper;
+
+import java.util.HashMap;
+
+import org.mybatis.spring.annotation.MapperScan;
+
+import com.hukun.graduation.model.StudentInfoModel;
+
+@Mapper
+public interface StudentInfoMapper {
+	
+	StudentInfoModel getStudentInfo(Long params);
+}

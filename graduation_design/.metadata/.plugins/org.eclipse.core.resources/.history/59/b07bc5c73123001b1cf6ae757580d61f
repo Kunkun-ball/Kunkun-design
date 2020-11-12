@@ -1,0 +1,11 @@
+package com.hukun.graduation.service;
+
+import com.hukun.graduation.model.StudentInfoModel;
+
+public interface StudentInfoService {
+	
+	/**
+	  * 查询
+	 */
+	StudentInfoModel getList(Long paramsObject);
+}

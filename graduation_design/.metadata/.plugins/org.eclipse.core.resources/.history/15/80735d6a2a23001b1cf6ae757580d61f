@@ -1,0 +1,21 @@
+package com.hukun.graduation.component;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hukun.graduation.mapper.StudentInfoMapper;
+import com.hukun.graduation.model.StudentInfoModel;
+import com.hukun.graduation.service.StudentInfoService;
+
+@Service
+public class StudentInfoServiceImpl implements StudentInfoService {
+
+	@Autowired
+	private StudentInfoMapper studentInfo;
+	
+	@Override
+	public StudentInfoModel getList(Long params) {
+		return studentInfo.getStudentInfo(params);
+	}
+
+}

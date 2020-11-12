@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.hukun.graduation.mapper.StudentInfoMapper">
+
+	<select id="getList" resultType="com.hukun.graduation.model.StudentInfoModel">
+		select
+			sid,
+			sname,
+			college,
+			profession,
+			telephone,
+			grade
+		from
+			studentInfo
+	</select>
+
+	<select id="getlistByProfession" resultType="com.hukun.graduation.model.StudentInfoModel">
+		select
+			sid,
+			sname,
+			college,
+			profession,
+			telephone,
+			grade
+		from 
+			studentInfo
+		where
+			profession=#{profession}
+	</select>
+	
+	<select id="getStudentInfo" parameterType="map" resultType="com.hukun.graduation.model.StudentInfoModel">
+		select
+			sid,
+			sname,
+			college,
+			profession,
+			telephone,
+			grade
+		from
+			studentInfo
+		where
+			sid=#{sid}	
+	</select>
+	
+	<insert id="insertStudentInfo" parameterType="map" useGeneratedKeys="true" keyProperty="snumber">
+		insert
+			studentInfo(
+				sid,
+				sname,
+				college,
+				profession,
+				telephone,
+				grade
+			)
+			values(
+				#{sid},
+				#{sname},
+				#{college},
+				#{profession},
+				#{telephone},
+				#{grade}
+			)
+	</insert>
+	
+	<delete id="deleteStudentInfo" parameterType="map">
+		delete
+		from
+			studentInfo
+		where
+			sid=#{sid}
+	</delete>
+	
+	<update id="updateStudentInfo" parameterType="map">
+		update
+			studentInfo
+		set
+			sname=#{sname},
+			college=#{college},
+			profession=#{profession},
+			telephone=#{telephone},
+			grade=#{grade}
+		where
+			sid=#{sid}		
+	</update>
+</mapper>

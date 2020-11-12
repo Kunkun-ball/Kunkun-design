@@ -1,0 +1,13 @@
+package com.hukun.graduation.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DataController {
+	
+	@RequestMapping("/rest")
+	public String onRest() {
+		return "success";
+	}
+}

@@ -1,0 +1,10 @@
+package com.hukun.graduation.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+import com.hukun.graduation.model.StudentInfoModel;
+
+@Mapper
+public interface StudentInfoMapper {
+	
+	StudentInfoModel getStudentInfo(Long params);
+}

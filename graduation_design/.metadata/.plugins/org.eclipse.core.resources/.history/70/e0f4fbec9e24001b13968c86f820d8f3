@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<<mapper namespace="com.hukun.graduation.mapper.StudentHealthInfoMapper">
+	
+	<update id="updateStudentHealthInfo" parameterType="map">
+		update
+			studenthealthinfo
+		set
+			bodyTemperature=#{bodyTemperature}
+			cough=#{cough},
+			vomit=#{vomit},
+			diarrhea={diarrhea}
+		where
+			shid=#{shid}
+	</update>
+
+</mapper>
+
+	

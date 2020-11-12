@@ -1,0 +1,9 @@
+package com.hukun.graduation.service;
+
+import com.alibaba.fastjson.JSONObject;
+
+@Service
+public interface AdminLoginService {
+	
+	JSONObject login(JSONObject paramsObject);
+}

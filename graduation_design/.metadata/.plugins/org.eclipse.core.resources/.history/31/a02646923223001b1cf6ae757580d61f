@@ -1,0 +1,18 @@
+package com.hukun.graduation.service;
+
+import java.util.HashMap;
+
+import com.hukun.graduation.model.StudentInfoModel;
+
+public interface StudentInfoService {
+	
+	/**
+	  * 查询
+	 */
+	StudentInfoModel getList(Long paramsObject);
+	
+	/**
+	 * 新增
+	 */
+	String insert(HashMap<Object, Object> params);
+}

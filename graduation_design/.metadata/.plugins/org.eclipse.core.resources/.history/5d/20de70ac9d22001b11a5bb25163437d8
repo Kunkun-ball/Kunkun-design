@@ -1,0 +1,8 @@
+package com.hukun.graduation.mapper;
+
+import com.hukun.graduation.model.StudentInfoModel;
+
+public class StudentInfoMapper {
+	
+	StudentInfoModel getStudentInfo(Long siid);
+}

@@ -1,0 +1,16 @@
+package com.hukun.graduation.mapper;
+
+import java.util.HashMap;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.alibaba.fastjson.JSONObject;
+import com.hukun.graduation.model.StudentInfoModel;
+
+@Mapper
+public interface StudentInfoMapper {
+	
+	StudentInfoModel getStudentInfo(JSONObject paramsObject);
+	
+	Long insertStudentInfo(JSONObject paramsObject);
+}

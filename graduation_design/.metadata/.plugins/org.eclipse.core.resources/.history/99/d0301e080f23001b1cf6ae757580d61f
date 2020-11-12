@@ -1,0 +1,20 @@
+package com.hukun.graduation.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.hukun.graduation.component.StudentInfoServiceImpl;
+import com.hukun.graduation.model.StudentInfoModel;
+
+@RestController
+public class DataController {
+	
+	@Autowired
+	private StudentInfoServiceImpl studentInfo;
+	
+	@RequestMapping("/rest")
+	public StudentInfoModel onRest(Long params) {
+		return "haha";
+	}
+}
